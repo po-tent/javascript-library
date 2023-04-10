@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Library App</title>
+    <meta name="author" content="Tien Nguyen">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel = "icon" href ="https://cdn.iconscout.com/icon/premium/png-256-thumb/books-1438306-1216751.png" type = "image/x-icon"> 
+
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="headerComponents">
+        <h1 id="title"> Library App </h1>
+        <p>This is a project for 
+            <a href="https://www.theodinproject.com/lessons/library" target="_blank">The Odin Project</a> 
+            in which I have to make a library using Object Constructors and LocalStorage.
+        </p>
+        <p>
+            You can also view the <a href="https://github.com/Tien96ng/library" target="_blank"> Github Repository </a> of this project.</p>
+        </p>
+        <!-- Button to Open the Form. -->
+        <button class="trigger" type="button">+ Add Book</button>
+    </div>
+    
+
+    <div class="modal">
+        <div class="modalContent">
+            <div class="modalHeader">
+                <h1 class="modalTitle"> Add a Book </h1>
+                <button type="button" class="close">
+                <span>&times;</span>
+                </button>
+            </div>
+            <div class="modalBody">
+                <form id="bookForm" action="" method="POST">
+
+                    <label for="author">Author:</label><br/>
+                    <input type="text" id="author" class="author" placeholder="Stephen King" required/> <br />
+            
+                    <label for="title">Title:</label><br/>
+                    <input type="text" id="title" class="title" placeholder="Salem's Lot" required/> <br />
+                    
+                    <label for="pages">Number of Pages:</label><br/>
+                    <input type="number" id="pages" class="pages" min="1" required/> <br />
+                    
+                    <span class="readQuestion">Have you read the book?</span>
+                    <label class="switch" for="read">
+                        <input type="checkbox" id="read" class="read"/>  
+                        <span class="slider round"></span>
+                    </label>
+                    <br />
+            
+                    <button type="submit" class="submitBtn"> Submit </button>
+                </form> 
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="renderLibrary"></div>
+
+    <script src="./script.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.2.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
